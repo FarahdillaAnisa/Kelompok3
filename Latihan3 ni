@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>M.Fikri Ramadhan</title>
+</head>
+<body>
+<center>
+<h1>Ujian Tengah Semester</h1>
+<h3>Tabel Perkalian</h3>
+<table border="1">
+<tr>
+<?php
+for ($i=6;$i<=10;$i++){
+	for ($j=0; $j<=5; $j++){
+		$hasil = $j * $i;
+		echo "<td> $j*$i</td>
+		<td>=</td>
+		<td> $hasil </td>";
+	}
+	echo "</tr>";
+}
+?>
+</tr>
+</table>
+<h3>Array 4D Menampilkan Data</h3>
+<?php
+	$data=array(array("Fikri","Curry","Harden"),array("Basket","Nyoblos","Berkelahi"),array("D4","S1","S2"),array("Jl.Taluk","Jl.Oakland","Jl.LosAngles"));
+
+	echo "<strong>DATA :</strong><br>";
+	echo "Nama : ". $data[0][0] ."<br>"."Hobi : ".$data[1][0]."<br>"."Pendidikan : ".$data[2][0]."<br>"."Alamat : ".$data[3][0]."<br>" ;
+	echo "<br>";
+	echo "Nama : ". $data[0][1] ."<br>"."Hobi : ".$data[1][1]."<br>"."Pendidikan : ".$data[2][1]."<br>"."Alamat : ".$data[3][1] ."<br>";
+	echo "<br>";
+	echo "Nama : ". $data[0][2] ."<br>"."Hobi : ".$data[1][2]."<br>"."Pendidikan : ".$data[2][2]."<br>"."Alamat : ".$data[3][2] ;
+
+?>
+</center>
+</body>
+</html>
