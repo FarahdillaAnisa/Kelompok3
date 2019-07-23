@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="loginsignup-style.css">
 <body>
 	<div class="loginbox">
-	<img src="avatar.jpg" class="avatar">
+	<img src="images/avatar.jpg" class="avatar">
 	<h1>Sign-Up</h1>
 	<form>
 		<p>Name</p>

@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="loginbox">
-	<img src="avatar.jpg" class="avatar">
+	<img src="images/avatar.jpg" class="avatar">
 	<h1>Login</h1>
 	<form>
 		<p>Username</p>
