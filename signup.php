@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SingUp form</title>
+	<title>Sign Up form</title>
 	<link rel="stylesheet" type="text/css" href="loginsignup-style.css">
 <body>
 	<div class="loginbox">
