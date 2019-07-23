@@ -8,7 +8,7 @@
 	<div class="loginbox">
 		<img src="images/avatar.jpg" class="avatar">
 		<h1>Sign-Up</h1>
-		<form action="daftar" method="post">
+		<form action="daftar.php" method="post">
 			<p>Name</p>
 			<input type="text" name="nama" placeholder="Masukkan Nama :">
 			<p>E-mail</p>
