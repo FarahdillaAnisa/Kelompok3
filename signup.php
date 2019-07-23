@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SingUp form</title>
-	<link rel="stylesheet" type="text/css" href="Style.css">
+	<title>Sign Up form</title>
+	<link rel="stylesheet" type="text/css" href="loginsignup-style.css">
 <body>
 	<div class="loginbox">
 	<img src="avatar.jpg" class="avatar">
