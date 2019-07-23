@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>SingUp form</title>
-	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link rel="stylesheet" type="text/css" href="loginsignup-style.css">
 <body>
 	<div class="loginbox">
 	<img src="avatar.jpg" class="avatar">
