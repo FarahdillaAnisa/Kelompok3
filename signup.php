@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Sign Up form</title>
+	<title>SingUp form</title>
 	<link rel="stylesheet" type="text/css" href="loginsignup-style.css">
 <body>
 	<div class="loginbox">
