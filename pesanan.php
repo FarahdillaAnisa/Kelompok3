@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$connect = mysqli_connect("localhost", "root", "", "tbl_product");
+$connect = mysqli_connect("localhost", "root", "", "rumahmakan_awak");
 
 if(isset($_POST["add_to_cart"]))
 {
