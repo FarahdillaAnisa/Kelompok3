@@ -313,24 +313,12 @@ $(document).ready(function(){
 				        <td><?php echo $user_data['nohp'];?></td>
 				        <td><?php echo $user_data['username'];?></td>
 				        <td><?php echo $user_data['password'];?></td>
-				        <td><a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> 
-				        	<a href="#deleteEmployeeModal" class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td>
+				        <td><a href="edit.php" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> 
+				        	<a href="delete.php" class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td>
 				        </tr>   
     					<?php } ?>
                 </tbody>
             </table>
-			<div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 	<!-- add Modal HTML -->
@@ -372,65 +360,77 @@ $(document).ready(function(){
 			</div>
 		</div>
 	</div>
-	<!-- Edit Modal HTML -->
-	<div id="editEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="edit.php" method="post" name="form2">
-					<div class="modal-header">						
-						<h4 class="modal-title">Edit Data</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">					
-						<div class="form-group">
-							<label>Nama</label>
-							<input type="text" class="form-control" required name="nama">
-						</div>
-						<div class="form-group">
-							<label>Email</label>
-							<input type="email" class="form-control" required name="email">
-						</div>
-						<div class="form-group">
-							<label>No. HP</label>
-							<input type="text" class="form-control" required name="nohp">
-						</div>
-						<div class="form-group">
-							<label>Username</label>
-							<input type="text" class="form-control" required name="username">
-						</div>		
-						<div class="form-group">
-							<label>Password</label>
-							<input type="text" class="form-control" required name="password">
-						</div>		
-					</div>
-					<div class="modal-footer">
-						<input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-info" value="Simpan" name="submit">
-					</div>
-				</form>
-			</div>
+
+	<!-- update modal HTML-->
+	<?php
+// include database connection file
+include ("koneksi.php");
+$id = $_GET['id_login'];
+$result = mysqli_query($db, "SELECT * FROM user WHERE id_login=$id");
+
+while($user_data = mysqli_fetch_array($result)){
+?>
+<!-- Edit Modal HTML -->
+    <div id="editEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="post" name="form2" action="edit_update.php">
+                    <div class="modal-header">        
+                        <h4 class="modal-title">Edit Data</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">                    
+                        <div class="form-group">
+                            <label>Nama</label>
+                            <input type="hidden" name="id" value="<?php echo $user_data['id_login']; ?>">
+                            <input type="text" class="form-control" required name="nama" value="<?php echo $user_data['nama'];?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" required name="email" value="<?php echo $user_data['email']; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>No. HP</label>
+                            <input type="text" class="form-control" required name="nohp" value="<?php echo $user_data['nohp'];?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" class="form-control" required name="username" value="<?php echo $user_data['username'];?>">
+                        </div>      
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" required name="password" value="<?php echo $user_data['password'];?>">
+                        </div>      
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-info" value="Simpan" name="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
+<!-- delete modal HTML-->
+<div id="deleteEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form action="hapus-delete.php" method="post">
+				<div class="modal-header">						
+					<h4 class="modal-title">Hapus Data User</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">					
+					<p>Yakin ingin menghapus data?</p>
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+					<input type="submit" class="btn btn-danger" value="Delete" name="submit">
+				</div>
+			</form>
 		</div>
 	</div>
-	<!-- Delete Modal HTML -->
-	<div id="deleteEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="delete.php" method="post">
-					<div class="modal-header">						
-						<h4 class="modal-title">Hapus Data User</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">					
-						<p>Yakin ingin menghapus data?</p>
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-danger" value="Delete" name="submit">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+</div>
 </body>
 </html>                                		                            
