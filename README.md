@@ -14,4 +14,9 @@ Tugas :
 - membuat database rumahmakanawak.sql
 - memperbaiki bagian pesanan.php
 2. Firman Danu
+Tugas :
+-Membuat menu tentang Awak
+-Membuat menu Layanan Awak
+-Membuat menu pemesanan 
+
 3. M. Fikri Ramadhan
