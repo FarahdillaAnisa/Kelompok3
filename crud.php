@@ -313,10 +313,9 @@ $(document).ready(function(){
 				        echo "<td>".$user_data['nohp']."</td>";   
 				        echo "<td>".$user_data['username']."</td>";    
 				        echo "<td>".$user_data['password']."</td>";     
-				        echo "<td><a href='#editEmployeeModal?id=$user_data[id_login]' class='edit' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a> <a href='#deleteEmployeeModal?id=$user_data[id_login]' class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td></tr>";        
+				        echo "<td><a href='#editEmployeeModal?id=?><?php echo $data_user['id_login'] ?><?php' class='edit' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a> <a href='#deleteEmployeeModal' class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td></tr>";        
     					}
     				?>
-  
                 </tbody>
             </table>
 			<div class="clearfix">
@@ -353,7 +352,7 @@ $(document).ready(function(){
 						</div>
 						<div class="form-group">
 							<label>No. HP</label>
-							<input type="text" class="form-control" required name="nohp"></textarea>
+							<input type="text" class="form-control" required name="nohp">
 						</div>
 						<div class="form-group">
 							<label>Username</label>
@@ -376,32 +375,36 @@ $(document).ready(function(){
 	<div id="editEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form>
+				<form action="edit.php" method="post" name="form2">
 					<div class="modal-header">						
-						<h4 class="modal-title">Edit Employee</h4>
+						<h4 class="modal-title">Edit Data</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
 						<div class="form-group">
-							<label>Name</label>
-							<input type="text" class="form-control" required>
+							<label>Nama</label>
+							<input type="text" class="form-control" required name="nama">
 						</div>
 						<div class="form-group">
 							<label>Email</label>
-							<input type="email" class="form-control" required>
+							<input type="email" class="form-control" required name="email">
 						</div>
 						<div class="form-group">
-							<label>Address</label>
-							<textarea class="form-control" required></textarea>
+							<label>No. HP</label>
+							<input type="text" class="form-control" required name="nohp">
 						</div>
 						<div class="form-group">
-							<label>Phone</label>
-							<input type="text" class="form-control" required>
-						</div>					
+							<label>Username</label>
+							<input type="text" class="form-control" required name="username">
+						</div>		
+						<div class="form-group">
+							<label>Password</label>
+							<input type="text" class="form-control" required name="password">
+						</div>		
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-info" value="Save">
+						<input type="submit" class="btn btn-info" value="Simpan" name="submit">
 					</div>
 				</form>
 			</div>
@@ -411,18 +414,17 @@ $(document).ready(function(){
 	<div id="deleteEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form>
+				<form action="delete.php" method="post">
 					<div class="modal-header">						
-						<h4 class="modal-title">Delete Employee</h4>
+						<h4 class="modal-title">Hapus Data User</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
-						<p>Are you sure you want to delete these Records?</p>
-						<p class="text-warning"><small>This action cannot be undone.</small></p>
+						<p>Yakin ingin menghapus data?</p>
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-danger" value="Delete">
+						<input type="submit" class="btn btn-danger" value="Delete" name="submit">
 					</div>
 				</form>
 			</div>
