@@ -333,36 +333,40 @@ $(document).ready(function(){
             </div>
         </div>
     </div>
-	<!-- Edit Modal HTML -->
+	<!-- add Modal HTML -->
 	<div id="addEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form>
+				<form action="add.php" method="post" name="form1">
 					<div class="modal-header">						
-						<h4 class="modal-title">Add Employee</h4>
+						<h4 class="modal-title">Tambah Data User</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
 						<div class="form-group">
-							<label>Name</label>
-							<input type="text" class="form-control" required>
+							<label>Nama</label>
+							<input type="text" class="form-control" required name="nama">
 						</div>
 						<div class="form-group">
 							<label>Email</label>
-							<input type="email" class="form-control" required>
+							<input type="email" class="form-control" required name="email">
 						</div>
 						<div class="form-group">
-							<label>Address</label>
-							<textarea class="form-control" required></textarea>
+							<label>No. HP</label>
+							<input type="text" class="form-control" required name="nohp"></textarea>
 						</div>
 						<div class="form-group">
-							<label>Phone</label>
-							<input type="text" class="form-control" required>
-						</div>					
+							<label>Username</label>
+							<input type="text" class="form-control" required name="username">
+						</div>		
+						<div class="form-group">
+							<label>Password</label>
+							<input type="text" class="form-control" required name="password">
+						</div>			
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-success" value="Add">
+						<input type="submit" class="btn btn-success" value="Tambah" name="submit">
 					</div>
 				</form>
 			</div>
