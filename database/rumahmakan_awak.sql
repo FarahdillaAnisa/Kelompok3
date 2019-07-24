@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2019 at 04:38 PM
+-- Generation Time: Jul 25, 2019 at 12:49 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -30,17 +30,27 @@ CREATE TABLE IF NOT EXISTS `tbl_product` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `price` double(10,2) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+  `price` int(10) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_product`
 --
 
 INSERT INTO `tbl_product` (`id`, `name`, `image`, `price`) VALUES
-(1, 'Samsung J2 Pro', '1.jpg', 100.00),
-(2, 'HP Notebook', '2.jpg', 299.00),
-(3, 'Panasonic T44 Lite', '3.jpg', 125.00);
+(1, 'Dekke Na Niura', 'DekkeNaNiura.jpg', 30000),
+(2, 'Pempek', 'pempek.jpg', 20000),
+(3, 'Sate Ayam Madura', 'sateayamm.jpg', 15000),
+(10, 'Sate Kambing', 'satekambing.jpg', 20000),
+(11, 'Soto Lamongan', 'sotolamongan.jpeg', 20000),
+(12, 'Karedok Sunda', 'karedok.jpg', 15000),
+(13, 'Es Cendol', 'cendol.jpg', 7000),
+(14, 'Es Blewah', 'esblewah.jpg', 10000),
+(15, 'Es Campur', 'escampur.jpg', 7000),
+(16, 'Es Cincau Hitam', 'escincauhitam.png', 8000),
+(17, 'Putu Piring', 'putupiring.jpg', 10000),
+(18, 'Lapis Legit', 'lapislegit.jpg', 20000),
+(19, 'Talam Bulan', 'kuetepungberas.jpg', 10000);
 
 -- --------------------------------------------------------
 
@@ -92,7 +102,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `user`
 --
