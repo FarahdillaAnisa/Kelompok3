@@ -307,15 +307,16 @@ $(document).ready(function(){
 								<label for="checkbox2"></label>
 							</span>
 						</td>
-        				<?php
-				        echo "<td>".$user_data['nama']."</td>";
-				        echo "<td>".$user_data['email']."</td>";
-				        echo "<td>".$user_data['nohp']."</td>";   
-				        echo "<td>".$user_data['username']."</td>";    
-				        echo "<td>".$user_data['password']."</td>";     
-				        echo "<td><a href='#editEmployeeModal?id=?><?php echo $data_user['id_login'] ?><?php' class='edit' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Edit'>&#xE254;</i></a> <a href='#deleteEmployeeModal' class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td></tr>";        
-    					}
-    				?>
+        				
+				        <td><?php echo $user_data['nama'];?></td>
+				        <td><?php echo $user_data['email'];?></td>
+				        <td><?php echo $user_data['nohp'];?></td>
+				        <td><?php echo $user_data['username'];?></td>
+				        <td><?php echo $user_data['password'];?></td>
+				        <td><a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> 
+				        	<a href="#deleteEmployeeModal" class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td>
+				        </tr>   
+    					<?php } ?>
                 </tbody>
             </table>
 			<div class="clearfix">
@@ -403,6 +404,7 @@ $(document).ready(function(){
 						</div>		
 					</div>
 					<div class="modal-footer">
+						<input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
 						<input type="submit" class="btn btn-info" value="Simpan" name="submit">
 					</div>
