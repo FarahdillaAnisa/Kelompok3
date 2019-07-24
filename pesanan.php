@@ -45,7 +45,7 @@ if(isset($_GET["action"]))
 			{
 				unset($_SESSION["shopping_cart"][$keys]);
 				echo '<script>alert("Item Removed")</script>';
-				echo '<script>window.location="index.php"</script>';
+				echo '<script>window.location="pesanan.php"</script>';
 			}
 		}
 	}
@@ -77,7 +77,7 @@ if(isset($_GET["action"]))
 					{
 				?>
 			<div class="col-md-4">
-				<form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">
+				<form method="post" action="pesanan.php?action=add&id=<?php echo $row["id"]; ?>">
 					<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
 						<img src="images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
 
@@ -124,7 +124,7 @@ if(isset($_GET["action"]))
 						<td><?php echo $values["item_quantity"]; ?></td>
 						<td>$ <?php echo $values["item_price"]; ?></td>
 						<td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
-						<td><a href="index.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Hapus</span></a></td>
+						<td><a href="pesanan.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Hapus</span></a></td>
 					</tr>
 					<?php
 							$total = $total + ($values["item_quantity"] * $values["item_price"]);
