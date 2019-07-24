@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2019 at 10:16 AM
+-- Generation Time: Jul 24, 2019 at 04:38 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -19,6 +19,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `rumahmakan_awak`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_product`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_product` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `price` double(10,2) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_product`
+--
+
+INSERT INTO `tbl_product` (`id`, `name`, `image`, `price`) VALUES
+(1, 'Samsung J2 Pro', '1.jpg', 100.00),
+(2, 'HP Notebook', '2.jpg', 299.00),
+(3, 'Panasonic T44 Lite', '3.jpg', 125.00);
 
 -- --------------------------------------------------------
 
@@ -51,6 +73,12 @@ INSERT INTO `user` (`id_login`, `nama`, `email`, `nohp`, `username`, `password`)
 --
 
 --
+-- Indexes for table `tbl_product`
+--
+ALTER TABLE `tbl_product`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -60,6 +88,11 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `tbl_product`
+--
+ALTER TABLE `tbl_product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `user`
 --
