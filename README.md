@@ -12,5 +12,6 @@ Tugas :
 - membuat logout.php agar user bisa logout
 - membuat koneksi.php sebagai penghubung dengan database
 - membuat database rumahmakanawak.sql
+- memperbaiki bagian pesanan.php
 2. Firman Danu
 3. M. Fikri Ramadhan
