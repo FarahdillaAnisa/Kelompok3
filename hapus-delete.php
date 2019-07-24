@@ -3,7 +3,7 @@
 include ("koneksi.php");
 if(isset($_POST['submit']))
 {  // Get id from URL to delete that user
-	$id = $_GET['id'];
+	$id = $_GET['id_login'];
 
 // Delete user row from table based on given id
 	$result = mysqli_query($db, "DELETE FROM user WHERE id_login=$id");

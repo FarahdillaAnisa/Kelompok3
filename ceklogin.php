@@ -9,7 +9,7 @@ $login = mysqli_query($db, "SELECT * FROM user WHERE (username = '".$_POST['user
 $rowcount = mysqli_num_rows($login);
 if ($rowcount == 1) {
 	$_SESSION['username'] = $_POST['username'];
-	header('location: beranda.html?status=sukses');
+	header('location: beranda.php?status=sukses');
 }
 else{
 	header('location: login.php?status=gagal');

@@ -37,14 +37,14 @@
           </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="beranda.html" class="nav-link">Beranda</a></li>
+            <li class="nav-item active"><a href="beranda.php" class="nav-link">Beranda</a></li>
             <li class="nav-item"><a href="menu.html" class="nav-link">Menu Awak</a></li>
             <li class="nav-item"><a href="layanan.html" class="nav-link">Layanan Awak</a></li>
             <li class="nav-item"><a href="promo.html" class="nav-link">Promo Awak</a></li>
             <li class="nav-item"><a href="Tentang.html" class="nav-link">Tentang Awak</a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link">Kontak Awak</a></li>
-            <li><?php session_start(); echo $_session['username'] ?></a></li>
-            <li><a href="beranda-login.html">Logout</a></li>
+            <li class="nav-item"><a href="#"><?php session_start(); echo $_SESSION['username'] . "       "?></a></li>
+            <li class="nav-item"><a href="logout.php">Logout</a></li>
 
           </ul>
         </div>
@@ -78,7 +78,7 @@
             <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
               <span class="subheading">Lomak</span>
 
-              <p><a href="file:///C:/xampp/htdocs/Kelompok3/menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Order Now</a></p>
+              <p><a href="pesanan.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Pesan Sekarang</a></p>
             </div>
             <div class="col-md-6 ftco-animate">
               <img src="images/bg_2.png" class="img-fluid" alt="">
@@ -96,7 +96,7 @@
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
               <span class="subheading">Selamat Datang Sanak Awak</span>
               <h1 class="mb-4">Awak masak sesuai selera Sanak</h1>
-              <p><a href="file:///C:/xampp/htdocs/Kelompok3/menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Order Now</a></p>
+              <p><a href="pesanan.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Pesan Sekarang</a></p>
             </div>
 
           </div>
