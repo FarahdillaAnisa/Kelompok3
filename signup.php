@@ -20,6 +20,7 @@
 			<p>Password</p>
 			<input type="Password" name="password" placeholder="Masukkan Password :">
 			<input type="submit" name="submit" value="Sign Up">
+			<a href="login.php">Login</a>
 		</form>
 	</div>
 </body>
