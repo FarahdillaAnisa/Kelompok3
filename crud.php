@@ -18,6 +18,30 @@ $result = mysqli_query($db, "SELECT * FROM user ORDER BY id_login DESC");
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- pemanggilan css -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+
+<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+
+<link rel="stylesheet" href="css/aos.css">
+
+<link rel="stylesheet" href="css/ionicons.min.css">
+
+<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+<link rel="stylesheet" href="css/flaticon.css">
+<link rel="stylesheet" href="css/icomoon.css">
+<link rel="stylesheet" href="css/style.css">
+
 <style type="text/css">
     body {
         color: #566787;
@@ -266,9 +290,23 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<div style="height: 150px; background-image: url(images/bg_4.jpg);">
-		<a class="navbar-brand" href="index.html"><div class="mr-1"><img src="images/logo.png" width="70px" style="text-align: center;"></div></a>
-	</div>
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+          <a class="navbar-brand" href="index.html"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="beranda.php" class="nav-link">Pendataan User</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Admin</a></li>
+            <li class="nav-item"><a href="logoutadm.php" class="nav-link">Logout</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
@@ -315,8 +353,8 @@ $(document).ready(function(){
 				        <td><?php echo $user_data['nohp'];?></td>
 				        <td><?php echo $user_data['username'];?></td>
 				        <td><?php echo $user_data['password'];?></td>
-				        <td><a href="#editEmployeeModal?id_login=<?php echo $user_data['id_login']?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> 
-				        	<a href="#deleteEmployeeModal?id_login=<?php echo $user_data['id_login']?>" class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td>
+				        <td><a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> 
+				        	<a href="#deleteEmployeeModal" class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td>
 				        </tr>   
     					<?php } ?>
                 </tbody>
@@ -364,14 +402,6 @@ $(document).ready(function(){
 	</div>
 
 	<!-- update modal HTML-->
-	<?php
-// include database connection file
-include ("koneksi.php");
-$id = $_GET['id_login'];
-$result = mysqli_query($db, "SELECT * FROM user WHERE id_login=$id");
-
-while($user_data = mysqli_fetch_array($result)){
-?>
 <!-- Edit Modal HTML -->
     <div id="editEmployeeModal" class="modal fade">
         <div class="modal-dialog">
@@ -412,7 +442,6 @@ while($user_data = mysqli_fetch_array($result)){
             </div>
         </div>
     </div>
-<?php } ?>
 
 <!-- delete modal HTML-->
 <div id="deleteEmployeeModal" class="modal fade">
