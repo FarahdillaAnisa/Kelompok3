@@ -59,14 +59,56 @@ if(isset($_GET["action"]))
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+
+	    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	    <link rel="stylesheet" href="css/animate.css">
+	    
+	    <link rel="stylesheet" href="css/owl.carousel.min.css">
+	    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+	    <link rel="stylesheet" href="css/magnific-popup.css">
+
+	    <link rel="stylesheet" href="css/aos.css">
+
+	    <link rel="stylesheet" href="css/ionicons.min.css">
+
+	    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+	    
+	    <link rel="stylesheet" href="css/flaticon.css">
+	    <link rel="stylesheet" href="css/icomoon.css">
+	    <link rel="stylesheet" href="css/style.css">
 	</head>
-	<body>
+	<body style="background-image: url(images/food.png)">
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+          <a class="navbar-brand" href="index.html"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="beranda.php" class="nav-link">Beranda</a></li>
+            <li class="nav-item"><a href="menu.html" class="nav-link">Menu Awak</a></li>
+            <li class="nav-item"><a href="layanan.html" class="nav-link">Layanan Awak</a></li>
+            <li class="nav-item"><a href="promo.html" class="nav-link">Promo Awak</a></li>
+            <li class="nav-item"><a href="Tentang.html" class="nav-link">Tentang Awak</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Kontak Awak</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
 		<br />
 		<div class="container">
 			<br />
 			<br />
 			<br />
-			<h3 align="center">Pesanan Makanan Sanak Dirumah Makan Awak</h3><br />
+			<h3 align="center" style="font-size: 20pt; color: black;">Pesanan Makanan Sanak Dirumah Makan Awak</h3><br />
 			<br /><br />
 			<?php
 				$query = "SELECT * FROM tbl_product ORDER BY id ASC";
@@ -79,7 +121,7 @@ if(isset($_GET["action"]))
 			<div class="col-md-4">
 				<form method="post" action="pesanan.php?action=add&id=<?php echo $row["id"]; ?>">
 					<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
-						<img src="images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
+						<img src="images/<?php echo $row["image"]; ?>" class="img-responsive" width="200px" style="height: 100px"><br />
 
 						<h4 class="text-info"><?php echo $row["name"]; ?></h4>
 
@@ -91,7 +133,7 @@ if(isset($_GET["action"]))
 
 						<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
 
-						<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+						<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Pesan" />
 
 					</div>
 				</form>
@@ -102,9 +144,9 @@ if(isset($_GET["action"]))
 			?>
 			<div style="clear:both"></div>
 			<br />
-			<h3>Menu Yang Dipesan</h3>
+			<h3 style="color: black;">Menu Yang Dipesan</h3>
 			<div class="table-responsive">
-				<table class="table table-bordered">
+				<table class="table table-bordered" style="background-color: #fff;">
 					<tr>
 						<th width="40%">Nama</th>
 						<th width="10%">Jumlah</th>
