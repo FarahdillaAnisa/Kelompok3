@@ -1,7 +1,6 @@
 <?php
 // Create database connection using config file
 include ("koneksi.php");
-
 // Fetch all users data from database
 $result = mysqli_query($db, "SELECT * FROM user ORDER BY id_login DESC");
 ?>
@@ -12,7 +11,7 @@ $result = mysqli_query($db, "SELECT * FROM user ORDER BY id_login DESC");
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<title>Admin | Dashboard Awak</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,7 +21,7 @@ $result = mysqli_query($db, "SELECT * FROM user ORDER BY id_login DESC");
 <style type="text/css">
     body {
         color: #566787;
-		background: #f5f5f5;
+		background-image: url(images/food.png);
 		font-family: 'Varela Round', sans-serif;
 		font-size: 13px;
 	}
@@ -267,6 +266,9 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+	<div style="height: 150px; background-image: url(images/bg_4.jpg);">
+		<a class="navbar-brand" href="index.html"><div class="mr-1"><img src="images/logo.png" width="70px" style="text-align: center;"></div></a>
+	</div>
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
@@ -313,8 +315,8 @@ $(document).ready(function(){
 				        <td><?php echo $user_data['nohp'];?></td>
 				        <td><?php echo $user_data['username'];?></td>
 				        <td><?php echo $user_data['password'];?></td>
-				        <td><a href="edit.php" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> 
-				        	<a href="delete.php" class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td>
+				        <td><a href="#editEmployeeModal?id_login=<?php echo $user_data['id_login']?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> 
+				        	<a href="#deleteEmployeeModal?id_login=<?php echo $user_data['id_login']?>" class='delete' data-toggle='modal'><i class='material-icons' data-toggle='tooltip' title='Delete'>&#xE872;</i></a></td>
 				        </tr>   
     					<?php } ?>
                 </tbody>
@@ -374,7 +376,8 @@ while($user_data = mysqli_fetch_array($result)){
     <div id="editEmployeeModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="post" name="form2" action="edit_update.php">
+                <form action="edit_update.php" method="post" name="form2">
+                	<input type="hidden" name="id" value="<?php echo $user_data['id_login']; ?>">
                     <div class="modal-header">        
                         <h4 class="modal-title">Edit Data</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -382,7 +385,6 @@ while($user_data = mysqli_fetch_array($result)){
                     <div class="modal-body">                    
                         <div class="form-group">
                             <label>Nama</label>
-                            <input type="hidden" name="id" value="<?php echo $user_data['id_login']; ?>">
                             <input type="text" class="form-control" required name="nama" value="<?php echo $user_data['nama'];?>">
                         </div>
                         <div class="form-group">
