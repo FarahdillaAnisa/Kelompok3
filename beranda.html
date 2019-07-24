@@ -43,6 +43,8 @@
             <li class="nav-item"><a href="promo.html" class="nav-link">Promo Awak</a></li>
             <li class="nav-item"><a href="Tentang.html" class="nav-link">Tentang Awak</a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link">Kontak Awak</a></li>
+            <li><?php session_start(); echo $_session['username'] ?></a></li>
+            <li><a href="beranda-login.html">Logout</a></li>
 
           </ul>
         </div>
