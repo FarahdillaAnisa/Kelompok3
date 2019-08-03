@@ -20,3 +20,9 @@ Tugas :
 -Membuat menu pemesanan 
 
 3. M. Fikri Ramadhan
+Tugas:
+-Membuat Tampilan Login,SignUp dan cssnya 
+-Membuat tampilan menu beranda.php
+-Membuat tempilan contact.php
+-Mengedit,Menambahkan Tampilan footer setiap halaman
+-Menambahkan logo rumah makan awak disetiap halaman
