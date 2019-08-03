@@ -12,7 +12,7 @@ Tugas :
 - membuat logout.php agar user bisa logout
 - membuat koneksi.php sebagai penghubung dengan database
 - membuat database rumahmakanawak.sql
-- memperbaiki bagian pesanan.php
+- memperbaiki bagian pesanan.php, menambahkan promo pada pesanan.php
 2. Firman Danu
 Tugas :
 -Membuat menu tentang Awak
