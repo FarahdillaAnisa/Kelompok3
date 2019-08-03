@@ -191,10 +191,6 @@ if(isset($_GET["action"]))
 								$promo = 15/100 * $total;
 								$totalbayar = $total - $promo;
 							}
-							elseif ($total < 50000) {
-								$promo = 0,00
-								$totalbayar = $total - $promo;
-							}
 						}
 					
 					?>
