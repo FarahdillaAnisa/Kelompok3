@@ -168,7 +168,7 @@
         	</div>
         	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
         		<div class="staff">
-      				<div class="img mb-4" style="background-image: url(images/person_4.jpg);"></div>
+      				<div class="img mb-4" style="background-image: url(images/fikri.JPG);"></div>
       				<div class="info text-center">
       					<h3><a href="teacher-single.html">Muhammad Fikri Ramadhan</a></h3>
       					<span class="position">Uda Fikri</span>
