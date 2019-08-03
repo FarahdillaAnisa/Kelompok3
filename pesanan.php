@@ -13,6 +13,7 @@ if(isset($_POST["add_to_cart"]))
 			$item_array = array(
 				'item_id'			=>	$_GET["id"],
 				'item_name'			=>	$_POST["hidden_name"],
+				'item_jenis'		=>	$_POST["hidden_jenis"],
 				'item_price'		=>	$_POST["hidden_price"],
 				'item_quantity'		=>	$_POST["quantity"]
 			);
@@ -28,6 +29,7 @@ if(isset($_POST["add_to_cart"]))
 		$item_array = array(
 			'item_id'			=>	$_GET["id"],
 			'item_name'			=>	$_POST["hidden_name"],
+			'item_jenis'		=>	$_POST["hidden_jenis"],
 			'item_price'		=>	$_POST["hidden_price"],
 			'item_quantity'		=>	$_POST["quantity"]
 		);
@@ -92,12 +94,13 @@ if(isset($_GET["action"]))
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="beranda.php" class="nav-link">Beranda</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link">Menu Awak</a></li>
-            <li class="nav-item"><a href="layanan.html" class="nav-link">Layanan Awak</a></li>
-            <li class="nav-item"><a href="promo.html" class="nav-link">Promo Awak</a></li>
-            <li class="nav-item"><a href="Tentang.html" class="nav-link">Tentang Awak</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Kontak Awak</a></li>
-
+            <li class="nav-item"><a href="menu.php" class="nav-link">Menu Awak</a></li>
+            <li class="nav-item"><a href="layanan.php" class="nav-link">Layanan Awak</a></li>
+            <li class="nav-item"><a href="promo.php" class="nav-link">Promo Awak</a></li>
+            <li class="nav-item"><a href="Tentang.php" class="nav-link">Tentang Awak</a></li>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="#"><?php echo $_SESSION['username'] . " "?></a></li>
+            <li class="nav-item"><a href="logout.php">&nbspLogout</a></li>
           </ul>
         </div>
       </div>
@@ -125,11 +128,15 @@ if(isset($_GET["action"]))
 
 						<h4 class="text-info"><?php echo $row["name"]; ?></h4>
 
+						<h4 class="text-success"><?php echo $row["jenis"]; ?></h4>
+
 						<h4 class="text-danger">$ <?php echo $row["price"]; ?></h4>
 
-						<input type="text" name="quantity" value="1" class="form-control" />
+						<input type="text" name="quantity" placeholder="jumlah">
 
 						<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
+
+						<input type="hidden" name="hidden_jenis" value="<?php echo $row["jenis"]; ?>" />
 
 						<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
 
@@ -149,6 +156,7 @@ if(isset($_GET["action"]))
 				<table class="table table-bordered" style="background-color: #fff;">
 					<tr>
 						<th width="40%">Nama</th>
+						<th width="10%">Jenis</th>
 						<th width="10%">Jumlah</th>
 						<th width="20%">Harga</th>
 						<th width="15%">Total</th>
@@ -163,6 +171,7 @@ if(isset($_GET["action"]))
 					?>
 					<tr>
 						<td><?php echo $values["item_name"]; ?></td>
+						<td><?php echo $values["item_jenis"]; ?></td>
 						<td><?php echo $values["item_quantity"]; ?></td>
 						<td>$ <?php echo $values["item_price"]; ?></td>
 						<td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
@@ -170,13 +179,37 @@ if(isset($_GET["action"]))
 					</tr>
 					<?php
 							$total = $total + ($values["item_quantity"] * $values["item_price"]);
+							if ($total > 50000) {
+								$promo = 5/100 * $total;
+								$totalbayar = $total - $promo;
+							}
+							elseif ($total > 100000) {
+								$promo = 10/100 * $total;
+								$totalbayar = $total - $promo;
+							}
+							elseif ($total > 150000) {
+								$promo = 15/100 * $total;
+								$totalbayar = $total - $promo;
+							}
 						}
+					
 					?>
 					<tr>
-						<td colspan="3" align="right">Total</td>
-						<td align="right">$ <?php echo number_format($total, 2); ?></td>
+						<td colspan="4" align="right">Total</td>
+						<td align="left">$ <?php echo number_format($total, 2); ?></td>
 						<td></td>
 					</tr>
+					<tr>
+						<td colspan="4" align="right">Promo</td>
+						<td align="left">$ <?php echo number_format($promo, 2); ?></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="4" align="right">Total Bayar</td>
+						<td align="left">$ <?php echo number_format($totalbayar, 2); ?></td>
+						<td></td>
+					</tr>
+
 					<?php
 					}
 					?>
