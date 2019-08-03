@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Kontak - Rumah Makan Awak</title>
+    <title>Promo Awak - Rumah Makan Awak</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -31,18 +31,20 @@
   <body>
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	       <a class="navbar-brand" href="index.html"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
+	      <a class="navbar-brand" href="index.html"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="beranda.php" class="nav-link">Beranda</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link">Menu Awak</a></li>
-            <li class="nav-item"><a href="layanan.html" class="nav-link">Layanan Awak</a></li>
-            <li class="nav-item"><a href="promo.html" class="nav-link">Promo Awak</a></li>
-            <li class="nav-item"><a href="Tentang.html" class="nav-link">Tentang Awak</a></li>
-            <li class="nav-item active"><a href="contact.html" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="menu.php" class="nav-link">Menu Awak</a></li>
+            <li class="nav-item"><a href="layanan.php" class="nav-link">Layanan Awak</a></li>
+            <li class="nav-item active"><a href="promo.php" class="nav-link">Promo Awak</a></li>
+            <li class="nav-item"><a href="Tentang.php" class="nav-link">Tentang Awak</a></li>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="#"><?php session_start(); echo $_SESSION['username'] . " "?></a></li>
+            <li class="nav-item"><a href="logout.php">&nbspLogout</a></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -51,71 +53,74 @@
 
     <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
 
-      <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+      <div class="slider-item" style="background-image: url(images/makan1.jpg">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Kontak Awak</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="beranda.php">Beranda Awak</a></span> <span>Contact</span></p>
+            	<h1 class="mb-3 mt-5 bread">Promo</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="beranda.php">Beranda Awak</a></span> <span>Promo Awak</span></p>
             </div>
 
           </div>
         </div>
       </div>
     </section>
+    
 
-    <section class="ftco-section contact-section">
-      <div class="container mt-5">
-        <div class="row block-9">
-					<div class="col-md-4 contact-info ftco-animate">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-	              <h2 class="h4">Kontak Awak</h2>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Alamat:</span> Jl.Sudirman - Pekanbaru</p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>No.hp:</span> <a href="tel://1234567920">+62821-9492-5541</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Email:</span> <a href="mailto:info@yoursite.com">rumahmakanawak@gmail.com</a></p>
-	            </div>
-						</div>
-					</div>
-					<div class="col-md-1"></div>
-          <div class="col-md-6 ftco-animate">
-            <form action="#" class="contact-form">
-            	<div class="row">
-            		<div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Username">
-	                </div>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Promo Awak</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            <p>Nah ini salah satu kelebihan kalau makan disini wak, dapet promo manteup</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="#" class="block-20" style="background-image: url('images/diskon.png');">
+              </a>
+              <div class="text py-4 d-block">
+              	<div class="meta">
+                  <div><a href="#">Hingga 20-Agustus-2019</a></div>
                 </div>
-                <div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Email">
-	                </div>
-	                </div>
+                <h3 class="heading mt-2"><a href="#">Promo 25%</a></h3>
+                <p>Berlaku untuk setiap transaksi pembelian makanan (all food items) sebanyak minimal 5 porsi</p>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subjek">
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/diskon1.png');">
+              </a>
+              <div class="text py-4 d-block">
+              	<div class="meta">
+                  <div><a href="#">Hingga 20-September-2019</a></div>
+                </div>
+                <h3 class="heading mt-2"><a href="#">Promo 15%</a></h3>
+                <p>Berlaku untuk setiap transaksi pembelian minuman (all beverage items) sebanyak minimal 3 buah</p>
               </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Pesan"></textarea>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/diskon2.png');">
+              </a>
+              <div class="text py-4 d-block">
+              	<div class="meta">
+                  <div><a href="#">Hingga 20-Oktober-2019</a></div>
+                </div>
+                <h3 class="heading mt-2"><a href="#">Promo 10%</a></h3>
+                <p>Berlaku setiap transaksi pembelian kue (all cake items) sebanyak minimal 4 porsi</p>
               </div>
-              <div class="form-group">
-                <input type="submit" value="Kirim Pesan" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <div id="map"></div>
 
     <footer class="ftco-footer ftco-section img">
       <div class="overlay"></div>

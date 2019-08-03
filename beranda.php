@@ -38,13 +38,13 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="beranda.php" class="nav-link">Beranda</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link">Menu Awak</a></li>
-            <li class="nav-item"><a href="layanan.html" class="nav-link">Layanan Awak</a></li>
-            <li class="nav-item"><a href="promo.html" class="nav-link">Promo Awak</a></li>
-            <li class="nav-item"><a href="Tentang.html" class="nav-link">Tentang Awak</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Kontak Awak</a></li>
-            <li class="nav-item"><a href="#"><?php session_start(); echo $_SESSION['username'] . "       "?></a></li>
-            <li class="nav-item"><a href="logout.php">Logout</a></li>
+            <li class="nav-item"><a href="menu.php" class="nav-link">Menu Awak</a></li>
+            <li class="nav-item"><a href="layanan.php" class="nav-link">Layanan Awak</a></li>
+            <li class="nav-item"><a href="promo.php" class="nav-link">Promo Awak</a></li>
+            <li class="nav-item"><a href="Tentang.php" class="nav-link">Tentang Awak</a></li>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="#"><?php session_start(); echo $_SESSION['username'] . " "?></a></li>
+            <li class="nav-item"><a href="logout.php">&nbspLogout</a></li>
 
           </ul>
         </div>
