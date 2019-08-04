@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Data User</title>
-	
+	<title>Data Menu</title>
+
 	<link rel="shortcut icon" href="https://demo.learncodeweb.com/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -33,9 +33,9 @@
 						<ul class="navbar-nav mr-auto">
 							<li>&nbsp&nbsp&nbsp</li>
 
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users" class="nav-link active">Data User</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users" class="nav-link">Data User</a></li>
 
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Pemesanan" href="browse-menus.php" class="nav-link">Data Menu</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Menu" href="browse-menus.php" class="nav-link active">Data Menu</a></li>
 
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a href="#" class="nav-link">admin</a></li>
 
@@ -52,26 +52,23 @@
 	<br>
 	<?php
 	$condition	=	'';
-	if(isset($_REQUEST['nama']) and $_REQUEST['nama']!=""){
-		$condition	.=	' AND nama LIKE "%'.$_REQUEST['nama'].'%" ';
+	if(isset($_REQUEST['name']) and $_REQUEST['name']!=""){
+		$condition	.=	' AND name LIKE "%'.$_REQUEST['name'].'%" ';
 	}
-	if(isset($_REQUEST['email']) and $_REQUEST['email']!=""){
-		$condition	.=	' AND email LIKE "%'.$_REQUEST['email'].'%" ';
+	if(isset($_REQUEST['image']) and $_REQUEST['image']!=""){
+		$condition	.=	' AND image LIKE "%'.$_REQUEST['image'].'%" ';
 	}
-	if(isset($_REQUEST['nohp']) and $_REQUEST['nohp']!=""){
-		$condition	.=	' AND nohp LIKE "%'.$_REQUEST['nohp'].'%" ';
+	if(isset($_REQUEST['price']) and $_REQUEST['price']!=""){
+		$condition	.=	' AND price LIKE "%'.$_REQUEST['price'].'%" ';
 	}
-	if(isset($_REQUEST['username']) and $_REQUEST['username']!=""){
-		$condition	.=	' AND username LIKE "%'.$_REQUEST['username'].'%" ';
+	if(isset($_REQUEST['jenis']) and $_REQUEST['jenis']!=""){
+		$condition	.=	' AND jenis LIKE "%'.$_REQUEST['jenis'].'%" ';
 	}
-	if(isset($_REQUEST['password']) and $_REQUEST['password']!=""){
-		$condition	.=	' AND password LIKE "%'.$_REQUEST['password'].'%" ';
-	}
-	$userData	=	$db->getAllRecords('user','*',$condition,'ORDER BY id_login DESC');
+	$userData	=	$db->getAllRecords('tbl_product','*',$condition,'ORDER BY id DESC');
 	?>
    	<div class="container">
 		<div class="card">
-			<div class="card-header"><i class="fa fa-fw fa-globe"></i> <strong>Tampilan Data User</strong> <a href="add-users.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i> Tambah User</a></div>
+			<div class="card-header"><i class="fa fa-fw fa-globe"></i> <strong>Tampilan Data Menu</strong> <a href="add-menus.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i> Tambah User</a></div>
 			<div class="card-body">
 				<?php
 				if(isset($_REQUEST['msg']) and $_REQUEST['msg']=="rds"){
@@ -85,25 +82,25 @@
 				}
 				?>
 				<div class="col-sm-12">
-					<h5 class="card-title"><i class="fa fa-fw fa-search"></i> Cari Data User</h5>
+					<h5 class="card-title"><i class="fa fa-fw fa-search"></i> Cari Data</h5>
 					<form method="get">
 						<div class="row">
 							<div class="col-sm-2">
 								<div class="form-group">
-									<label>Nama</label>
-									<input type="text" name="nama" id="username" class="form-control" value="<?php echo isset($_REQUEST['nama'])?$_REQUEST['nama']:''?>" placeholder="Masukkan Nama User">
+									<label>Nama Menu</label>
+									<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($_REQUEST['name'])?$_REQUEST['name']:''?>" placeholder="Masukkan Nama Menu">
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="form-group">
-									<label>Email</label>
-									<input type="email" name="email" id="useremail" class="form-control" value="<?php echo isset($_REQUEST['email'])?$_REQUEST['email']:''?>" placeholder="Masukan Email user">
+									<label>Harga</label>
+									<input type="text" name="price" id="price" class="form-control" value="<?php echo isset($_REQUEST['price'])?$_REQUEST['price']:''?>" placeholder="Masukan harga">
 								</div>
 							</div>
 							<div class="col-sm-2">
 								<div class="form-group">
-									<label>No. HP</label>
-									<input type="tel" name="nohp" id="userphone" class="form-control" value="<?php echo isset($_REQUEST['nohp'])?$_REQUEST['nohp']:''?>" placeholder="Masukkan No. HP User">
+									<label>Jenis Menu</label>
+									<input type="text" name="jenis" id="jenis" class="form-control" value="<?php echo isset($_REQUEST['jenis'])?$_REQUEST['jenis']:''?>" placeholder="Masukkan Jenis Menu">
 								</div>
 							</div>
 							<div class="col-sm-2">
@@ -124,11 +121,9 @@
 				<thead>
 					<tr class="bg-primary text-white">
 						<th>No</th>
-						<th>Nama</th>
-						<th>Email</th>
-						<th>No. HP</th>
-						<th>Username</th>
-						<th>Password</th>
+						<th>Nama Menu</th>
+						<th>Harga</th>
+						<th>Jenis</th>
 						<th class="text-center">Aksi</th>
 					</tr>
 				</thead>
@@ -140,14 +135,12 @@
 					?>
 					<tr>
 						<td><?php echo $s;?></td>
-						<td><?php echo $val['nama'];?></td>
-						<td><?php echo $val['email'];?></td>
-						<td><?php echo $val['nohp'];?></td>
-						<td><?php echo $val['username'];?></td>
-						<td><?php echo $val['password'];?></td>
+						<td><?php echo $val['name'];?></td>
+						<td><?php echo $val['price'];?></td>
+						<td><?php echo $val['jenis'];?></td>
 						<td align="center">
-							<a href="edit-users.php?editId=<?php echo $val['id_login'];?>" class="text-primary"><i class="fa fa-fw fa-edit"></i> Edit</a> | 
-							<a href="delete.php?delId=<?php echo $val['id_login'];?>" class="text-danger" onClick="return confirm('Apakah Anda Yakin menghapus data ini');"><i class="fa fa-fw fa-trash"></i> Hapus</a>
+							<a href="edit-menus.php?editId=<?php echo $val['id'];?>" class="text-primary"><i class="fa fa-fw fa-edit"></i> Edit Menu</a> | 
+							<a href="delete-menus.php?delId=<?php echo $val['id'];?>" class="text-danger" onClick="return confirm('Apakah Anda Yakin menghapus data menu ini');"><i class="fa fa-fw fa-trash"></i> Hapus</a>
 						</td>
 					</tr>
 					<?php } ?>
