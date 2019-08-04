@@ -104,17 +104,36 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 	</script>
 
 </head>
-
-
-
 <body>
-
-	
-
 	<div class="bg-light border-bottom shadow-sm sticky-top">
 
 		<div class="container">
+			<header class="blog-header py-1">
 
+				<nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="beranda.php"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan Awak</a>
+
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+						<ul class="navbar-nav mr-auto">
+							<li>&nbsp&nbsp&nbsp</li>
+
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users" class="nav-link active">Data User</a></li>
+
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Pemesanan" href="pemesanan.php" class="nav-link">Data Menu</a></li>
+
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a href="#" class="nav-link">admin</a></li>
+
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a href="logoutadm.php" class="nav-link">Logout</a></li>
+						</ul>
+
+					</div>
+
+				</nav>
+
+			</header>
 			
 		</div> <!--/.container-->
 
