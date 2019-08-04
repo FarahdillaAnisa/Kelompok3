@@ -13,6 +13,7 @@ Tugas :
 - membuat koneksi.php sebagai penghubung dengan database
 - membuat database rumahmakanawak.sql
 - memperbaiki bagian pesanan.php, menambahkan promo pada pesanan.php
+- membuat bagian admin(CRUD data user)
 2. Firman Danu
 Tugas :
 -Membuat menu tentang Awak
