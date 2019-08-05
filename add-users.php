@@ -1,30 +1,38 @@
 <?php include_once('config.php');
 if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 	extract($_REQUEST);
-	if($name==""){
+	if($nama==""){
 		header('location:'.$_SERVER['PHP_SELF'].'?msg=un');
 		exit;
-	}elseif($price==""){
+	}elseif($email==""){
 		header('location:'.$_SERVER['PHP_SELF'].'?msg=ue');
 		exit;
-	}elseif($jenis==""){
+	}elseif($nohp==""){
 		header('location:'.$_SERVER['PHP_SELF'].'?msg=up');
 		exit;	
+	}elseif($username==""){
+		header('location:'.$_SERVER['PHP_SELF'].'?msg=uu');
+		exit;
+	}elseif($password==""){
+		header('location:'.$_SERVER['PHP_SELF'].'?msg=upass');
+		exit;
 	}else{
 		
-		$userCount	=	$db->getQueryCount('tbl_product','id');
+		$userCount	=	$db->getQueryCount('user','id_login');
 		if($userCount[0]['total']<20){
 			$data	=	array(
-							'name'=>$name,
-							'price'=>$price,
-							'jenis'=>$jenis
+							'nama'=>$nama,
+							'email'=>$email,
+							'nohp'=>$nohp,
+							'username'=>$username,
+							'password'=>$password,
 						);
-			$insert	=	$db->insert('tbl_product',$data);
+			$insert	=	$db->insert('user',$data);
 			if($insert){
-				header('location:browse-menus.php?msg=ras');
+				header('location:browse-users.php?msg=ras');
 				exit;
 			}else{
-				header('location:browse-menus.php?msg=rna');
+				header('location:browse-users.php?msg=rna');
 				exit;
 			}
 		}else{
@@ -112,9 +120,9 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 						<ul class="navbar-nav mr-auto">
 							<li>&nbsp&nbsp&nbsp</li>
 
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users" class="nav-link">Data User</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users" class="nav-link active">Data User</a></li>
 
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Pemesanan" href="browse-menus.php" class="nav-link active">Data Menu</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Pemesanan" href="pemesanan.php" class="nav-link">Data Menu</a></li>
 
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a href="#" class="nav-link">admin</a></li>
 
@@ -201,7 +209,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 
 		<div class="card">
 
-			<div class="card-header"><i class="fa fa-fw fa-plus-circle"></i> <strong>Tambah Menu</strong> <a href="browse-users.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-globe"></i> Tampilan Data Menu</a></div>
+			<div class="card-header"><i class="fa fa-fw fa-plus-circle"></i> <strong>Tambah User</strong> <a href="browse-users.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-globe"></i> Tampilan Data User</a></div>
 
 			<div class="card-body">
 
@@ -215,25 +223,41 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 
 						<div class="form-group">
 
-							<label>Nama Menu<span class="text-danger">*</span></label>
+							<label>Nama User<span class="text-danger">*</span></label>
 
-							<input type="text" name="name" id="name" class="form-control" placeholder="Masukkan Nama Menu" required>
-
-						</div>
-
-						<div class="form-group">
-
-							<label>Harga <span class="text-danger">*</span></label>
-
-							<input type="text" name="price" id="price" class="form-control" placeholder="Masukkan Harga" required>
+							<input type="text" name="nama" id="username" class="form-control" placeholder="Masukkan Nama User" required>
 
 						</div>
 
 						<div class="form-group">
 
-							<label>Jenis Menu <span class="text-danger">*</span></label>
+							<label>Email <span class="text-danger">*</span></label>
 
-							<input type="text" name="jenis" id="jenis" placeholder="Masukkan jenis Menu" required>
+							<input type="email" name="email" id="useremail" class="form-control" placeholder="Masukkan Email USer" required>
+
+						</div>
+
+						<div class="form-group">
+
+							<label>No. HP <span class="text-danger">*</span></label>
+
+							<input type="text" class="tel form-control" name="nohp" id="userphone" placeholder="Masukkan No. HP" required>
+
+						</div>
+
+						<div class="form-group">
+
+							<label>Username <span class="text-danger">*</span></label>
+
+							<input type="text" name="username" id="username" class="form-control" placeholder="Masukkan Username" required>
+
+						</div>
+
+						<div class="form-group">
+
+							<label>Password <span class="text-danger">*</span></label>
+
+							<input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password" required>
 
 						</div>
 
