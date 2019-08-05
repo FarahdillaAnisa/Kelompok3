@@ -11,7 +11,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 		header('location:'.$_SERVER['PHP_SELF'].'?msg=up');
 		exit;	
 	}elseif($image==""){
-		header('location:'.$_SERVER['PHP_SELF'].'?msg=up');
+		header('location:'.$_SERVER['PHP_SELF'].'?msg=ug');
 		exit;	
 	}else{
 		
@@ -179,6 +179,8 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 
 			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Jenis Menu Wajib Diisi!</div>';
 
+		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="ug"){
+			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> gambar menu Wajib Diisi!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="ras"){
 
 			echo	'<div class="alert alert-success"><i class="fa fa-thumbs-up"></i> Penambahan Data Berhasil!</div>';
@@ -197,7 +199,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 
 		<div class="card">
 
-			<div class="card-header"><i class="fa fa-fw fa-plus-circle"></i> <strong>Tambah Menu</strong> <a href="browse-users.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-globe"></i> Tampilan Data Menu</a></div>
+			<div class="card-header"><i class="fa fa-fw fa-plus-circle"></i> <strong>Tambah Menu</strong> <a href="browse-menus.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-globe"></i> Tampilan Data Menu</a></div>
 
 			<div class="card-body">
 

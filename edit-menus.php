@@ -15,7 +15,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 		header('location:'.$_SERVER['PHP_SELF'].'?msg=up&editId='.$_REQUEST['editId']);
 		exit;
 	}elseif($image==""){
-		header('location:'.$_SERVER['PHP_SELF'].'?msg=up&editId='.$_REQUEST['editId']);
+		header('location:'.$_SERVER['PHP_SELF'].'?msg=ug&editId='.$_REQUEST['editId']);
 		exit;
 	}
 	$data	=	array(
@@ -95,6 +95,8 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Harga Wajib Diisi!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="up"){
 			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Jenis menu Wajib Diisi!</div>';
+		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="ug"){
+			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> gambar menu Wajib Diisi!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="ras"){
 			echo	'<div class="alert alert-success"><i class="fa fa-thumbs-up"></i> Penambahan Data Berhasil!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="rna"){
@@ -102,7 +104,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 		}
 		?>
 		<div class="card">
-			<div class="card-header"><i class="fa fa-fw fa-plus-circle"></i> <strong>Edit Data Menu</strong> <a href="browse-users.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-globe"></i> Data Menu</a></div>
+			<div class="card-header"><i class="fa fa-fw fa-plus-circle"></i> <strong>Edit Data Menu</strong> <a href="browse-menus.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-globe"></i> Data Menu</a></div>
 			<div class="card-body">
 				
 				<div class="col-sm-6">
