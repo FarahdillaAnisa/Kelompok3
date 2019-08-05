@@ -83,7 +83,7 @@
 				?>
 				<div class="col-sm-12">
 					<h5 class="card-title"><i class="fa fa-fw fa-search"></i> Cari Data</h5>
-					<form method="get">
+					<form method="get" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-sm-2">
 								<div class="form-group">
@@ -124,6 +124,7 @@
 						<th>Nama Menu</th>
 						<th>Harga</th>
 						<th>Jenis</th>
+						<th>Gambar</th>
 						<th class="text-center">Aksi</th>
 					</tr>
 				</thead>
@@ -138,6 +139,7 @@
 						<td><?php echo $val['name'];?></td>
 						<td><?php echo $val['price'];?></td>
 						<td><?php echo $val['jenis'];?></td>
+						<td><?php echo $val['image'];?></td>
 						<td align="center">
 							<a href="edit-menus.php?editId=<?php echo $val['id'];?>" class="text-primary"><i class="fa fa-fw fa-edit"></i> Edit Menu</a> | 
 							<a href="delete-menus.php?delId=<?php echo $val['id'];?>" class="text-danger" onClick="return confirm('Apakah Anda Yakin menghapus data menu ini');"><i class="fa fa-fw fa-trash"></i> Hapus</a>

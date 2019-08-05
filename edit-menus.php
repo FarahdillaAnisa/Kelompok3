@@ -90,15 +90,11 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 		
 		<?php
 		if(isset($_REQUEST['msg']) and $_REQUEST['msg']=="un"){
-			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Nama User Wajib Diisi!</div>';
+			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Nama Menu Wajib Diisi!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="ue"){
-			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Email User Wajib Diisi!</div>';
+			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Harga Wajib Diisi!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="up"){
-			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> No. HP User Wajib Diisi!</div>';
-		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="uu"){
-			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Username User Wajib Diisi!</div>';
-		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="upass"){
-			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Password User Wajib Diisi!</div>';
+			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Jenis User Wajib Diisi!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="ras"){
 			echo	'<div class="alert alert-success"><i class="fa fa-thumbs-up"></i> Penambahan Data Berhasil!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="rna"){
@@ -111,7 +107,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 				
 				<div class="col-sm-6">
 					<h5 class="card-title">Kolom dengan <span class="text-danger">*</span> wajib diisi!</h5>
-					<form method="post">
+					<form method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label>Nama Menu <span class="text-danger">*</span></label>
 							<input type="text" name="name" id="name" class="form-control" value="<?php echo $row[0]['name']; ?>" placeholder="Masukkan Nama Menu" required>
@@ -123,6 +119,10 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 						<div class="form-group">
 							<label>Jenis Menu <span class="text-danger">*</span></label>
 							<input type="text" name="jenis" id="jenis" maxlength="12" class="form-control" value="<?php echo $row[0]['jenis']; ?>" placeholder="Masukkan jenis" required>
+						</div>
+						<div class="form-group">
+							<label>Upload gambar <span class="text-danger">*</span></label>
+							<input type="file" name="image" id="image" class="form-control" value="<?php echo $row[0]['image']; ?>" placeholder="Masukkan gambar" required>
 						</div>
 						<div class="form-group">
 							<input type="hidden" name="editId" id="editId" value="<?php echo $_REQUEST['editId']?>">
