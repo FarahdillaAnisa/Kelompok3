@@ -31,18 +31,20 @@
   <body>
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
+	       <a class="navbar-brand" href="beranda.php"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="beranda.php" class="nav-link">Beranda</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link">Menu Awak</a></li>
-            <li class="nav-item"><a href="layanan.html" class="nav-link">Layanan Awak</a></li>
-            <li class="nav-item active"><a href="promo.html" class="nav-link">Promo Awak</a></li>
-            <li class="nav-item"><a href="Tentang.html" class="nav-link">Tentang Awak</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="menu.php" class="nav-link">Menu Awak</a></li>
+            <li class="nav-item"><a href="layanan.php" class="nav-link">Layanan Awak</a></li>
+            <li class="nav-item active"><a href="promo.php" class="nav-link">Promo Awak</a></li>
+            <li class="nav-item"><a href="Tentang.php" class="nav-link">Tentang Awak</a></li>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="#"><?php session_start(); echo $_SESSION['username'] . " "?></a></li>
+            <li class="nav-item"><a href="logout.php">&nbspLogout</a></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -85,8 +87,8 @@
               	<div class="meta">
                   <div><a href="#">Hingga 20-Agustus-2019</a></div>
                 </div>
-                <h3 class="heading mt-2"><a href="#">Promo 25%</a></h3>
-                <p>Berlaku untuk setiap transaksi pembelian makanan (all food items) sebanyak minimal 5 porsi</p>
+                <h3 class="heading mt-2"><a href="#">Promo 5%</a></h3>
+                <p>Berlaku untuk setiap transaksi pembelian all items melebihi 50000</p>
               </div>
             </div>
           </div>
@@ -98,8 +100,8 @@
               	<div class="meta">
                   <div><a href="#">Hingga 20-September-2019</a></div>
                 </div>
-                <h3 class="heading mt-2"><a href="#">Promo 15%</a></h3>
-                <p>Berlaku untuk setiap transaksi pembelian minuman (all beverage items) sebanyak minimal 3 buah</p>
+                <h3 class="heading mt-2"><a href="#">Promo 10%</a></h3>
+                <p>Berlaku untuk setiap transaksi pembelian all items melebihi 100000</p>
               </div>
             </div>
           </div>
@@ -111,8 +113,8 @@
               	<div class="meta">
                   <div><a href="#">Hingga 20-Oktober-2019</a></div>
                 </div>
-                <h3 class="heading mt-2"><a href="#">Promo 10%</a></h3>
-                <p>Berlaku setiap transaksi pembelian kue (all cake items) sebanyak minimal 4 porsi</p>
+                <h3 class="heading mt-2"><a href="#">Promo 15%</a></h3>
+                <p>Berlaku untuk setiap transaksi pembelian all items melebihi 150000</p>
               </div>
             </div>
           </div>

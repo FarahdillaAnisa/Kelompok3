@@ -31,18 +31,20 @@
   <body>
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
+	       <a class="navbar-brand" href="beranda.php"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="beranda.php" class="nav-link">Beranda</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link">Menu Awak</a></li>
-            <li class="nav-item"><a href="layanan.html" class="nav-link">Layanan Awak</a></li>
-            <li class="nav-item"><a href="promo.html" class="nav-link">Promo Awak</a></li>
-            <li class="nav-item active"><a href="Tentang.html" class="nav-link">Tentang Awak</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="menu.php" class="nav-link">Menu Awak</a></li>
+            <li class="nav-item"><a href="layanan.php" class="nav-link">Layanan Awak</a></li>
+            <li class="nav-item"><a href="promo.php" class="nav-link">Promo Awak</a></li>
+            <li class="nav-item active"><a href="Tentang.php" class="nav-link">Tentang Awak</a></li>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="#"><?php session_start(); echo $_SESSION['username'] . " "?></a></li>
+            <li class="nav-item"><a href="logout.php">&nbspLogout</a></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -128,6 +130,18 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+            <div class="staff">
+              <div class="img mb-4" style="background-image: url(images/person_1.jpg);"></div>
+              <div class="info text-center">
+                <h3><a href="teacher-single.html">Juragan Awak</a></h3>
+                <span class="position">Owner Rumah Makan Awak</span>
+                <div class="text">
+                  <p>Disini awak adalah owner dari Rumah Makan Awak yang menyediakan berbagai macam makanan, minuman dan cemilan khas Nusantara</p>
+                </div>
+              </div>
+            </div>
+          </div>
         	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
         		<div class="staff">
       				<div class="img mb-4" style="background-image: url(images/person_1.jpg);"></div>
@@ -142,9 +156,9 @@
         	</div>
         	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
         		<div class="staff">
-      				<div class="img mb-4" style="background-image: url(images/person_3.jpg);"></div>
+      				<div class="img mb-4" style="background-image: url(images/ica.jpeg);"></div>
       				<div class="info text-center">
-      					<h3><a href="teacher-single.html">Farahdilla Annisa</a></h3>
+      					<h3><a href="teacher-single.html">Farahdilla Anisa</a></h3>
       					<span class="position">Uni Ica</span>
       					<div class="text">
 	        				<p>Awak disini sebagai Koki Rumah Makan Awak dan lebih spesifik bagian Profesional Masakan Nusantara.</p>
@@ -154,7 +168,7 @@
         	</div>
         	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
         		<div class="staff">
-      				<div class="img mb-4" style="background-image: url(images/person_4.jpg);"></div>
+      				<div class="img mb-4" style="background-image: url(images/fikri.JPG);"></div>
       				<div class="info text-center">
       					<h3><a href="teacher-single.html">Muhammad Fikri Ramadhan</a></h3>
       					<span class="position">Uda Fikri</span>

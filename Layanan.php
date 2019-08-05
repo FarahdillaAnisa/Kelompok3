@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Kontak - Rumah Makan Awak</title>
+    <title>Layanan - Rumah Makan Awak</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -31,18 +31,20 @@
   <body>
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	       <a class="navbar-brand" href="index.html"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
+	       <a class="navbar-brand" href="beranda.php"><span class="mr-1"><img src="images/logo.png" width="40px"></span>Rumah Makan<br><small>Awak</small></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="beranda.php" class="nav-link">Beranda</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link">Menu Awak</a></li>
-            <li class="nav-item"><a href="layanan.html" class="nav-link">Layanan Awak</a></li>
-            <li class="nav-item"><a href="promo.html" class="nav-link">Promo Awak</a></li>
-            <li class="nav-item"><a href="Tentang.html" class="nav-link">Tentang Awak</a></li>
-            <li class="nav-item active"><a href="contact.html" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="menu.php" class="nav-link">Menu Awak</a></li>
+            <li class="nav-item active"><a href="layanan.php" class="nav-link">Layanan Awak</a></li>
+            <li class="nav-item"><a href="promo.php" class="nav-link">Promo Awak</a></li>
+            <li class="nav-item"><a href="Tentang.php" class="nav-link">Tentang Awak</a></li>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Kontak Awak</a></li>
+            <li class="nav-item"><a href="#"><?php session_start(); echo $_SESSION['username'] . " "?></a></li>
+            <li class="nav-item"><a href="logout.php">&nbspLogout</a></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -57,65 +59,106 @@
           <div class="row slider-text justify-content-center align-items-center">
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Kontak Awak</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="beranda.php">Beranda Awak</a></span> <span>Contact</span></p>
+            	<h1 class="mb-3 mt-5 bread">Pelayanan Awak</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="beranda.php">Beranda Awak</a></span> <span>Pelayanan</span></p>
             </div>
 
           </div>
         </div>
       </div>
     </section>
+    
 
-    <section class="ftco-section contact-section">
-      <div class="container mt-5">
-        <div class="row block-9">
-					<div class="col-md-4 contact-info ftco-animate">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-	              <h2 class="h4">Kontak Awak</h2>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Alamat:</span> Jl.Sudirman - Pekanbaru</p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>No.hp:</span> <a href="tel://1234567920">+62821-9492-5541</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Email:</span> <a href="mailto:info@yoursite.com">rumahmakanawak@gmail.com</a></p>
-	            </div>
-						</div>
-					</div>
-					<div class="col-md-1"></div>
-          <div class="col-md-6 ftco-animate">
-            <form action="#" class="contact-form">
-            	<div class="row">
-            		<div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Username">
-	                </div>
-                </div>
-                <div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Email">
-	                </div>
-	                </div>
+    <section class="ftco-section ftco-services">
+    	<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Layanan Awak</h2>
+            <p>Berikut adalah pelayanan yang dapat kami berikan tentang Rumah Makan Awak.</p>
+          </div>
+        </div>
+    		<div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-diet"></span>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subjek">
+              <div class="media-body">
+                <h3 class="heading">Makanan Sehat</h3>
+                <p>Memberikan makanan yang tentunya sehat dan tidak membahayakan sanak yang memakannya.</p>
               </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Pesan"></textarea>
+            </div>      
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-bicycle"></span>
               </div>
-              <div class="form-group">
-                <input type="submit" value="Kirim Pesan" class="btn btn-primary py-3 px-5">
+              <div class="media-body">
+                <h3 class="heading">Pelayanan yang Profesional</h3>
+                <p>Disini bukan hanya mendapatkan cita rasa masakan Indonesia yang enak saja, tetapi kami mempunyai pelayanan yang sangat baik untuk sanak.</p>
               </div>
-            </form>
+            </div>      
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5"><span class="flaticon-pizza-1"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Resep Asli Indonesia</h3>
+                <p>Resep masakan yang ada Di Rumah Makan Awak ini adalah resep yang kami dapat dari setiap daerah makanan kepada orang yang terpercaya yang mengetahui resep asli makanan secara turun temurun.</p>
+              </div>
+            </div>    
+          </div>
+        </div>
+    	</div>
+    </section>
+
+<section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Makanan Terlaris Rumah <br>Makan Awak</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            <p>Nak cari makanan nusantara ni tak payah, makanan nya pun beragam, sedap pastinya, murah dan suailah dengan kantong awak tu. Selain itu awak dapat info tentang sejarah makanan yang awak nak pesan tu.</p>
           </div>
         </div>
       </div>
+      <div class="container-wrap">
+        <div class="row no-gutters d-flex">
+          <div class="col-lg-4 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <a href="#" class="img" style="background-image: url(images/DekkeNaNiura.jpg);"></a>
+              <div class="text p-4">
+                <h3>Dekke Na Niura</h3>
+                <p>Masakan berbahan utama ikan mas ini awalnya di masak saat acara adat karena na niura ini dulu makanan bagi para raja-raja suku batak</p>
+                <p class="price"><span>Rp. 30.000</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <a href="#" class="img" style="background-image: url(images/pempek.jpg);"></a>
+              <div class="text p-4">
+                <h3>Pempek</h3>
+                <p>makanan khas palembang ini pasti maknyus wak apalagi dengan rasa kuah yang pedas cocok buat peminat rasa pedas</p>
+                <p class="price"><span>Rp. 20.000</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <a href="#" class="img" style="background-image: url(images/sateayamm.jpg);"></a>
+              <div class="text p-4">
+                <h3>Sate Ayam Khas Madura</h3>
+                <p>Menu satu ini salah satu yang paling banyak diminati karena rasa khas pada kuah kacang nya</p>
+                <p class="price"><span>Rp. 15.000</span></p>
+              </div>
+            </div>
+          </div>
+    		</div>
+    	</div>
     </section>
-
-    <div id="map"></div>
 
     <footer class="ftco-footer ftco-section img">
       <div class="overlay"></div>
