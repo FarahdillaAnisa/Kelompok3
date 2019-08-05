@@ -144,7 +144,7 @@
           </div>
         	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
         		<div class="staff">
-      				<div class="img mb-4" style="background-image: url(images/person_1.jpg);"></div>
+      				<div class="img mb-4" style="background-image: url(images/danu.jpg);"></div>
       				<div class="info text-center">
       					<h3><a href="teacher-single.html">Firman Danu Ilhamsyah</a></h3>
       					<span class="position">Uda Danu</span>
