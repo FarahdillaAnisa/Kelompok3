@@ -20,6 +20,7 @@ Tugas :
 - Membuat menu tentang Awak
 - Membuat menu Layanan Awak
 - Membuat menu pemesanan
+- membuat koneksi pemesanan
 
 
 3. M. Fikri Ramadhan
