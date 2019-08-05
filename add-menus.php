@@ -116,7 +116,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 						<ul class="navbar-nav mr-auto">
 							<li>&nbsp&nbsp&nbsp</li>
 
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users" class="nav-link">Data User</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users.php" class="nav-link">Data User</a></li>
 
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Pemesanan" href="browse-menus.php" class="nav-link active">Data Menu</a></li>
 
@@ -239,7 +239,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 
 							<label>Upload Gambar <span class="text-danger">*</span></label>
 
-							<input type="file" name="gambar" id="gambar" placeholder="Masukkan gambar Menu" required>
+							<input type="file" name="image" id="image" placeholder="Masukkan gambar Menu" required>
 
 						</div>
 

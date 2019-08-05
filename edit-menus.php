@@ -14,15 +14,11 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 	}elseif($jenis==""){
 		header('location:'.$_SERVER['PHP_SELF'].'?msg=up&editId='.$_REQUEST['editId']);
 		exit;
-	}elseif($image==""){
-		header('location:'.$_SERVER['PHP_SELF'].'?msg=ug&editId='.$_REQUEST['editId']);
-		exit;
 	}
 	$data	=	array(
 					'name'=>$name,
 					'price'=>$price,
 					'jenis'=>$jenis,
-					'image'=>$image,
 					);
 	$update	=	$db->update('tbl_product',$data,array('id'=>$editId));
 	if($update){
@@ -121,10 +117,6 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 						<div class="form-group">
 							<label>Jenis Menu <span class="text-danger">*</span></label>
 							<input type="text" name="jenis" id="jenis" class="form-control" value="<?php echo $row[0]['jenis']; ?>" placeholder="Masukkan jenis" required>
-						</div>
-						<div class="form-group">
-							<label>Upload gambar <span class="text-danger">*</span></label>
-							<input type="file" name="image" id="image" class="form-control" value="<?php echo $row[0]['image']; ?>" placeholder="Masukkan gambar" required>
 						</div>
 						<div class="form-group">
 							<input type="hidden" name="editId" id="editId" value="<?php echo $_REQUEST['editId']?>">
