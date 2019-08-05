@@ -113,7 +113,7 @@ if(isset($_GET["action"]))
 			<br />
 			<h3 align="center" style="font-size: 20pt; color: black;">Pesanan Makanan Sanak Dirumah Makan Awak</h3><br />
 			<br /><br />
-			<?php
+	<?php
 				$query = "SELECT * FROM tbl_product ORDER BY id ASC";
 				$result = mysqli_query($connect, $query);
 				if(mysqli_num_rows($result) > 0)
