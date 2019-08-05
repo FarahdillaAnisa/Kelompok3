@@ -122,7 +122,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users" class="nav-link active">Data User</a></li>
 
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Pemesanan" href="pemesanan.php" class="nav-link">Data Menu</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Pemesanan" href="browse-menus.php" class="nav-link">Data Menu</a></li>
 
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a href="#" class="nav-link">admin</a></li>
 
