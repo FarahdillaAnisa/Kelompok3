@@ -49,7 +49,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Tambah Data User</title>
+	<title>Tambah Data Menu</title>
 
 	
 
@@ -243,7 +243,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 
 						<div class="form-group">
 
-							<button type="submit" name="submit" value="submit" id="submit" class="btn btn-primary"><i class="fa fa-fw fa-plus-circle"></i> Tambah User</button>
+							<button type="submit" name="submit" value="submit" id="submit" class="btn btn-primary"><i class="fa fa-fw fa-plus-circle"></i> Tambah Menu</button>
 
 						</div>
 

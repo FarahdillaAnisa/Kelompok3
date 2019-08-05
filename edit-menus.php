@@ -68,9 +68,9 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 						<ul class="navbar-nav mr-auto">
 							<li>&nbsp&nbsp&nbsp</li>
 
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users.php" class="nav-link active">Data User</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users.php" class="nav-link ">Data User</a></li>
 
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Pemesanan" href="browse-menus.php" class="nav-link">Data Menu</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Pemesanan" href="browse-menus.php" class="nav-link active">Data Menu</a></li>
 
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a href="#" class="nav-link">admin</a></li>
 
@@ -94,7 +94,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="ue"){
 			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Harga Wajib Diisi!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="up"){
-			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Jenis User Wajib Diisi!</div>';
+			echo	'<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Jenis menu Wajib Diisi!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="ras"){
 			echo	'<div class="alert alert-success"><i class="fa fa-thumbs-up"></i> Penambahan Data Berhasil!</div>';
 		}elseif(isset($_REQUEST['msg']) and $_REQUEST['msg']=="rna"){
@@ -118,7 +118,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 						</div>
 						<div class="form-group">
 							<label>Jenis Menu <span class="text-danger">*</span></label>
-							<input type="text" name="jenis" id="jenis" maxlength="12" class="form-control" value="<?php echo $row[0]['jenis']; ?>" placeholder="Masukkan jenis" required>
+							<input type="text" name="jenis" id="jenis" class="form-control" value="<?php echo $row[0]['jenis']; ?>" placeholder="Masukkan jenis" required>
 						</div>
 						<div class="form-group">
 							<label>Upload gambar <span class="text-danger">*</span></label>

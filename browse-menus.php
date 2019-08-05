@@ -33,7 +33,7 @@
 						<ul class="navbar-nav mr-auto">
 							<li>&nbsp&nbsp&nbsp</li>
 
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Data User" href="browse-users.php" class="nav-link">Data User</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class=" nav-item"><a title="Data User" href="browse-users.php" class="nav-link">Data User</a></li>
 
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Data Menu" href="browse-menus.php" class="nav-link active">Data Menu</a></li>
 
@@ -68,7 +68,7 @@
 	?>
    	<div class="container">
 		<div class="card">
-			<div class="card-header"><i class="fa fa-fw fa-globe"></i> <strong>Tampilan Data Menu</strong> <a href="add-menus.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i> Tambah User</a></div>
+			<div class="card-header"><i class="fa fa-fw fa-globe"></i> <strong>Tampilan Data Menu</strong> <a href="add-menus.php" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i> Tambah Menu</a></div>
 			<div class="card-body">
 				<?php
 				if(isset($_REQUEST['msg']) and $_REQUEST['msg']=="rds"){
