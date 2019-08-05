@@ -119,6 +119,10 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 							<input type="text" name="jenis" id="jenis" class="form-control" value="<?php echo $row[0]['jenis']; ?>" placeholder="Masukkan jenis" required>
 						</div>
 						<div class="form-group">
+							<label>Gambar <span class="text-danger">*</span></label>
+							<input type="text" name="image" id="image" class="form-control" value="<?php echo $row[0]['image']; ?>" placeholder="Masukkan file gambar & ekstensi" required>
+						</div>
+						<div class="form-group">
 							<input type="hidden" name="editId" id="editId" value="<?php echo $_REQUEST['editId']?>">
 							<button type="submit" name="submit" value="submit" id="submit" class="btn btn-primary"><i class="fa fa-fw fa-edit"></i> Update Data Menu</button>
 						</div>

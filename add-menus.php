@@ -239,7 +239,7 @@ if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
 
 							<label>Upload Gambar <span class="text-danger">*</span></label>
 
-							<input type="file" name="image" id="image" placeholder="Masukkan gambar Menu" required>
+							<input type="text" name="image" id="image" placeholder="Masukkan gambar Menu" required>
 
 						</div>
 
