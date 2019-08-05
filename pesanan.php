@@ -111,7 +111,7 @@ if(isset($_GET["action"]))
 			<br />
 			<br />
 			<br />
-			<h3 align="center" style="font-size: 20pt; color: black;">Pesanan Makanan Sanak Dirumah Makan Awak</h3><br />
+			<h3 align="center" style="font-size: 20pt; color: black;">Pesanan Makanan Sanak Dirumah Makan Awak editan danu</h3><br />
 			<br /><br />
 	<?php
 				$query = "SELECT * FROM tbl_product ORDER BY id ASC";
