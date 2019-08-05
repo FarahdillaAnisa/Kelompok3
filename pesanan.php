@@ -191,6 +191,10 @@ if(isset($_GET["action"]))
 								$promo = 15/100 * $total;
 								$totalbayar = $total - $promo;
 							}
+							else{
+								$promo = 0;
+								$totalbayar = $total - $promo;
+							}
 						}
 					
 					?>
